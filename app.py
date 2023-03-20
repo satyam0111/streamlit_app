@@ -9,5 +9,5 @@ condition = df['City'] == city
 new_data= df[condition]
 
 column_names = df.columns.tolist()
-selected_column = st.selectbox("Select column to display", columns_names)
+selected_column = st.selectbox("Select column to display", column_names)
 st.write(df[selected_column])
