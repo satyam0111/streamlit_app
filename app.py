@@ -8,6 +8,6 @@ st.write('You want to go', city)
 condition = df['City'] == city
 new_data = df[condition]
 place=new_data['Place']
-new_list=place.rows.tolist()
-for values in new_list:
+col_values = new_data['Place'].tolist()
+for values in col_values:
   st.write(values)
