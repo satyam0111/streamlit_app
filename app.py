@@ -8,5 +8,6 @@ st.write('You want to go', city)
 condition = data['City'] == city
 new_data = data[condition]
 
-selected_column = st.selectbox("Select column to display", 'City','Places')
+column_names = df.columns.tolist()
+selected_column = st.selectbox("Select column to display", columns_names)
 st.write(df[selected_column])
