@@ -7,7 +7,6 @@ city = st.text_input('Where to ')
 st.write('You want to go', city)
 condition = data['City'] == city
 new_data = data[condition]
-st.write(new_data['Place'])
 
-df = pd.DataFrame(columns=('col %d' % i for i in range(2)))
-st.table(df)
+selected_column = st.selectbox("Select column to display", 'City','Places')
+st.write(df[selected_column])
