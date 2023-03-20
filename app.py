@@ -7,5 +7,5 @@ city = st.text_input('Where to ')
 st.write('You want to go', city)
 condition = df['City'] == city
 new_data = df[condition]
-
 st.write(new_data['Place'])
+st.dataframe(new_data)
