@@ -14,7 +14,6 @@ for i in range(len(col1_values)):
 
 
 import requests
-from bs4 import BeautifulSoup
 
 search_item = st.text_input("Enter search query")
 
@@ -22,8 +21,6 @@ search_item = st.text_input("Enter search query")
 url = f"https://www.google.com/search?q={search_item}"
 page = requests.get(url)
 
-# Parse the HTML content of the page using BeautifulSoup
-soup = BeautifulSoup(page.content, "html.parser")
 
 # Find all search result links and print them
 results = soup.find_all("div", class_="BNeawe vvjwJb AP7Wnd")
